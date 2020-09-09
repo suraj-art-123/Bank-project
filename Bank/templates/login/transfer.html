@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block css %}
+#div1{
+padding-top:195px;
+padding-bottom:195px
+}
+{% endblock %}
+{% block body %}
+<div class="container" id="div1">
+  <form action="/transfer1" method="post">
+  {% csrf_token %}
+      <h4 style="color:red;">{{correct}}</h4>
+      <h4><span style="color:green;">Your current balance is-: </span><span style="color:black;">{{balance}}</span></h4>
+     <br>
+      <p> Enter  acount number  in which you want to transfer money:</p>
+      <input type="number" name="raccno">
+      <br>
+      <br>
+         <p> Enter Amount to be transfered:</p>
+      <input type="number"  min="1" name="amount">
+      <br>
+      <br>
+      <button type="submit" class="btn btn-primary" style="background:#DC3545; border-radius:20px"  >Submit</button>
+  </form>
+</div>
+{% endblock %}

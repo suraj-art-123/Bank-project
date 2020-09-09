@@ -1,0 +1,16 @@
+{%   extends 'base.html' %}
+{% block css %}
+#div1{
+padding-top:200px;
+padding-bottom:200px
+}
+{% endblock %}
+{%  block body %}
+<div class="container" id="div1">
+
+  <a href="/statement1"><p>Get  all debited details     </p></a><br>
+  <a href="/statement2"><p>Get  all creadit  details    </p></a><br>
+    <a href="/statement3"><p>Get last five debited details   </p></a><br>
+    <a href="/statement4"><p>Get last five creadit  details   </p></a><br>
+</div>
+{% endblock %}

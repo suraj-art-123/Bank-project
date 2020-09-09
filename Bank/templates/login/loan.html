@@ -1,0 +1,74 @@
+{%   extends 'base.html' %}
+{% block css %}
+#div1{
+padding-top:100px;
+padding-bottom:300px
+}
+#head1
+{
+color:green;
+}
+.img-fluid
+{
+width:550px;
+height:500px;
+margin-top:60px;
+}
+
+{% endblock %}
+{%  block body %}
+
+<div class="container" id="div1" text-center>
+    {% load static %}
+    <h3 id="head1">{{msg}}</h3>
+    Qilin-Bank offers affordable and flexible housing loans that can
+    turn your dream of owning a home into reality.
+    We have products to suit every budget, taste and need.
+    Whether you are self-employed or salaried, want a floating or fixed rate,
+    Qilin-Bank will offer a loan that is just right for you.
+    Our offerings:
+    <ul>
+        <li>  Balance transfer available</li>
+        <li>For home loan you have to pay 8%/annum  </li>
+        <li>For car loan you have to pay 12%/annum</li>
+        <li>For bussiness loan you have to pay 10%/annum</li>
+        <li>For personal  loan you have to pay 15%/annum</li>
+    </ul>
+<div class="row">
+    <div class="col-md-6">
+      <h1>Fill Details to apply loan </h1>
+<form action="/apply_loan" method="post" style="width:500px; height:400px;">
+    {% csrf_token %}
+    <label for="inputEmail4">Loan Amount: </label>
+     <input type="number"  min="1" name="loanamount"  class="form-control " id="inputEmail4" required><br><br>
+    <label for="cars"> Loan Type:</label>
+<select  id="cars" name="loantype">
+  <option value="Home Loan">Home Loan</option>
+  <option value="Car Loan">Car Loan</option>
+  <option value="Bussiness Loan">Bussiness Loan <loan></loan></option>
+  <option value="Personal Loan">Personal Loan</option>
+</select><br><br>
+    <label for="inputEmail4">Loan periods (should be less than 60 months ):</label>
+     <input type="number"  min="1"  name="periodmonths" class="form-control" id="inputEmail2" required><br>
+     Select adhar_card: <input type="file" name="adhar" required><br><br>
+     Select pan_card: <input type="file" name="pan" required><br><br>
+     Select photo:  <input type="file" name="photo" required><br><br>
+     <div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" name="term_condition" id="customSwitch2" required>
+  <label class="custom-control-label" for="customSwitch2">I authorize Qilin-
+      Bank to call on the above mentioned number and explain
+      the features of the product anytime between 8 am to 9 pm.
+      I also agree to Axis Bank/ Subsidiaries/ Affiliates/ Agents contacting
+      me for various other product updates, special offers Third Party
+      Products or any such information from time to time.<a href="/term_conditions">Terms and Condition</a>
+</label>
+</div><br>
+     <button type="submit" style="background:#DC3545; border-radius:20px" class="btn btn-primary">Submit</button>
+</form>
+    </div>
+    <div class="col-md-6">
+        <img src='{% static "login/src1.jpg"%}' alt="#" class="img-fluid">
+    </div>
+    </div>
+</div>
+{% endblock %}

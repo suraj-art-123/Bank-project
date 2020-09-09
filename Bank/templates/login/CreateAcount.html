@@ -1,0 +1,35 @@
+{%   extends 'base.html' %}
+{% block css %}
+#div1{
+padding-top:100px;
+padding-bottom:100px
+}
+{% endblock %}
+{%  block body %}
+
+<!-- start contact us -->
+<div class="container" id="div1">
+    <h2 class="text-center">Fill The Details  </h2>
+    <h1 style="color:red;">{{ correct }}</h1>
+    <form action="/CreateAcount1" method="post">
+    {% csrf_token %}
+    <label for="inputEmail4">Acount Number: </label>
+     <input type="text"  name="accno" class="form-control" id="inputEmail3" required><br>
+        <label for="inputEmail4">Name: </label>
+     <input type="text"  name="name"  class="form-control " id="inputEmail4" required><br>
+    <label for="inputEmail4">Phon:</label>
+   <input type="text"  name="phon" class="form-control" id="inputEmail5" required><br>
+        <label for="inputEmail4">Email:</label>
+   <input type="email"  name="email" class="form-control" id="inputEmail6" required><br>
+    <label for="inputEmail4">Balance:</label>
+   <input type="text"  name="balance" class="form-control" id="inputEmail7" required><br>
+
+     <button type="submit" style="background:#DC3545; border-radius:20px" class="btn btn-primary">Submit</button>
+
+</form>
+
+
+</div>
+<!-- end of contact us -->
+<!-- end of contact us -->
+{% endblock %}

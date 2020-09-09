@@ -1,0 +1,58 @@
+{%   extends 'base.html' %}
+{% block css %}
+#div1{
+padding-top:100px;
+padding-bottom:100px
+}
+{% endblock %}
+{%  block body %}
+
+<!-- start contact us -->
+<div class="container" id="div1">
+    <h2 class="text-center">Contact Us </h2>
+    <div class="row">
+        <div class="col-md-8">
+            <h1 style="color:red;">{{ correct }}</h1>
+                <form action="/contacts" method="post">
+                    {% csrf_token %}
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="inputEmail4">Name </label>
+                            <input type="text"  name="name" class="form-control" id="inputEmail4" placeholder="Name should be in capital latters" required>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="inputPassword4">Phone</label>
+                            <input type="text" name="phon" class="form-control" id="inputPassword4" placeholder="1234" required>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputAddress">E-mail</label>
+                          <input type="email"  name="email" class="form-control" id="inputAddress" placeholder="suraj@gmail.com" required>
+                        </div>
+                          <div class="form-group col-md-2">
+                            <label for="inputZip">Pin code</label>
+                            <input type="text" name="code" class="form-control" id="inputZip">
+                          </div>
+                    <button type="submit" style="background:#DC3545; border-radius:20px" class="btn btn-primary">Send me </button>
+                      </form>
+
+        </div>
+        <div class="col-md-4 text mt-4">
+            <strong>Headquarter</strong>
+            Qilin Software lab pvt limited
+            <br>
+            HSR,Karnataka
+            <br>
+            HSR-560029<br>
+            Phone:+9643360903<br>
+            <a href="Qilin.com">http//www.Qilin.com</a>
+            </div>
+
+
+
+    </div>
+
+</div>
+<!-- end of contact us -->
+<!-- end of contact us -->
+{% endblock %}

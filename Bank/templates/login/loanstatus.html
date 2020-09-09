@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block css %}
+#div1{
+padding-top:250px;
+padding-bottom:250px
+}
+#head1{
+color:green;
+text-aligment:center;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+{% endblock %}
+{% block body %}
+{% load static %}
+<div class="container" id="div1">
+  <h1>Status Of your loan</h1>
+    <h2 id="head1">{{msg}}</h2>
+    <table style="width:100%">
+  <tr>
+    <th colspan="1">Loan id</th>
+    <th colspan="1">Loan Amount</th>
+    <th colspan="1">Loan type</th>
+    <th colspan="1">Account user</th>
+    <th colspan="1">Loan status</th>
+    <th colspan="1">Loan period</th>
+    <th colspan="1">Intrest rate</th>
+  </tr>
+
+       {% for loan in to_send %}
+      <tr>
+             <td>{{loan.loan_id}}</td>
+           <td>{{loan.loan_amount}}</td>
+    <td>{{loan.loan_type}}</td>
+    <td>{{loan.acount}}</td>
+    <td><span style="color:blue;">{{loan.loan_status}}</span></td>
+    <td>{{loan.loan_period_in_months}}</td>
+    <td>{{loan.intrest_rate}}% per annum</td>
+         </tr>
+          {% endfor %}
+
+
+</table>
+</div>
+{% endblock %}

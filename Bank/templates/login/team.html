@@ -1,0 +1,62 @@
+{%   extends 'base.html' %}
+{% block css %}
+#div1{
+padding-top:300px;
+padding-bottom:300px
+}
+.img-fluid
+{
+height:300px;
+width:350px;
+}
+{% endblock %}
+{%  block body %}
+{% load static %}
+<div class="container" id="div1" >
+    <h1 style="color:red;">OUR TEAM </h1>
+    <div class="row">
+        <div class="col-sm-4 mb-4">
+                 <img src='{% static "login/src1.jpg"%}' alt="#" class="img-fluid">
+        </div>
+        <div class="col-sm-4 mb-4">
+                   <img src='{% static "login/t2.jpg"%}' alt="#" class="img-fluid">
+        </div>
+        <div class="col-sm-4 mb-4">
+                   <img src='{% static "login/t3.jpg"%}' alt="#" class="img-fluid">
+        </div>
+    </div>
+      <div class="row">
+        <div class="col-sm-4 mb-4">
+                   <img src='{% static "login/t4.jpg"%}' alt="#" class="img-fluid">
+        </div>
+        <div class="col-sm-4 mb-4">
+                   <img src='{% static "login/t5.jpg"%}' alt="#" class="img-fluid">
+        </div>
+        <div class="col-sm-4 mb-4">
+                   <img src='{% static "login/t6.jpg"%}' alt="#" class="img-fluid">
+        </div>
+
+    </div>  <div class="row">
+        <div class="col-sm-4 mb-4">
+                   <img src='{% static "login/t7.jpg"%}' alt="#" class="img-fluid">
+        </div>
+        <div class="col-sm-4 mb-4">
+                   <img src='{% static "login/t8.jpg"%}' alt="#" class="img-fluid">
+        </div>
+        <div class="col-sm-4 mb-4">
+                   <img src='{% static "login/t9.jpg"%}' alt="#" class="img-fluid">
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 mb-4">
+                   <img src='{% static "login/t1.jpg"%}' alt="#" class="img-fluid">
+        </div>
+        <div class="col-sm-4 mb-4">
+                   <img src='{% static "login/t2.jpg"%}' alt="#" class="img-fluid">
+        </div>
+        <div class="col-sm-4 mb-4">
+                   <img src='{% static "login/t3.jpg"%}' alt="#" class="img-fluid">
+        </div>
+    </div>
+</div>
+{% endblock %}

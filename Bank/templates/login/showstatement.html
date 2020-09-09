@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block css %}
+#div1{
+padding-top:250px;
+padding-bottom:250px
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+{% endblock %}
+{% block body %}
+{% load static %}
+<div class="container" id="div1">
+
+    <h1>{{msg}}</h1><br><br>
+<table style="width:100%">
+  <tr>
+
+    <th colspan="1">{{msg1}}</th>
+    <th colspan="1">{{msg2}}</th>
+    <th colspan="1">{{msg3}}</th>
+  </tr>
+    {% for data in data1 %}
+  <tr>
+    <td>{{data.receiver}}</td>
+    <td>{{data.amount}}</td>
+    <td>{{data.timeStamp }}</td>
+  </tr>
+    {% endfor %}
+</table>
+</div>
+{% endblock %}

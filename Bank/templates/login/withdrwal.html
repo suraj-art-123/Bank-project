@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block css %}
+#div1{
+padding-top:195px;
+padding-bottom:195px
+}
+
+{% endblock %}
+{% block body %}
+<div class="container" id="div1">
+  <form action="/withdrwal1" method="post">
+  {% csrf_token %}
+      <h1 style="color:red;">{{correct}}</h1>
+      <h1 class="head1"> Enter your Acount number from which you want to withdraw:</h1>
+      <br>
+      <input type="text" name="accno">
+      <br>
+         <h1 class="head1"> Enter Amount to be withdraw:</h1>
+      <br>
+      <input type="text" name="amount">
+      <br>
+      <br>
+      <button type="submit" class="btn btn-primary" style="background:#DC3545; border-radius:20px"  >Submit</button>
+
+  </form>
+</div>
+{% endblock %}

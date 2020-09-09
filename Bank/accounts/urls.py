@@ -1,0 +1,27 @@
+from  . import views
+from django.urls import path,include
+urlpatterns = [
+     path('', views.home, name='home'),
+     path('sign', views.sign, name='sign'),
+     path('rlogin', views.rlogin, name='rlogin'),
+     path('signup', views.handleSignup, name='handleSignup'),
+     path('login', views.handleLogin, name='handleLogin'),
+     path('logout', views.handleLogout, name='handleLogout'),
+     path('checkbalance', views.checkbalance, name='checkbalance'),
+     path('transfer', views.transfer, name='transfer'),
+     path('transfer1', views.transfer1, name='transfer1'),
+     path('team1', views.team1, name='team1'),
+     path('contact', views.contact, name='contact'),
+     path('contacts', views.contacts, name='contacts'),
+     path('about', views.about, name='about'),
+     path('service', views.service, name='service'),
+     path('statement', views.statement, name='statement'),
+     path('statement1', views.statement1, name='statement1'),
+     path('statement2', views.statement2, name='statement2'),
+     path('statement3', views.statement3, name='statement3'),
+     path('statement4', views.statement4, name='statement4'),
+     path('loan', views.loan, name='loan'),
+     path('apply_loan', views.apply_loan, name='apply_loan'),
+     path('loan_status', views.loan_status, name='loan_status'),
+     path('term_conditions', views.term_conditions, name='term_conditions'),
+     ]

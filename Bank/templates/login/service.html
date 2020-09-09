@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block css %}
+#div1{
+padding-top:100px;
+padding-bottom:80px
+}
+#head1{
+text-aligment:center;
+}
+.img-fluid
+{
+width:550px;
+height:500px;
+margin-top:13px;
+}
+.head1
+{
+color:green;
+}
+{% endblock %}
+{% block body %}
+{% load static %}
+<div class="container" id="div1">
+    {% load static %}
+     Qilin-Bank offers affordable and flexible housing loans that can turn your dream of owning a home into reality.
+We have products to suit every budget, taste and need. Whether you are self-employed or salaried, want a floating or
+    fixed rate, Axis Bank will offer a loan that is just right for you.
+Our offerings:
+Pay Rs 11 lakhs* less interest with QuikPay Home Loan
+Early principal repayment
+Nil prepayment charges
+Balance transfer available
+   <div class="row">
+       <div class="col-md-6" style="padding-left:100px;">
+       <marquee><h4 class="head1">WELCOME TO QILIN BANK ENJOY OUR SERVICES </h4></marquee>
+           {% load l10n %}
+           <h4 class="head1">{{msg}}<span style="color:red;">
+               {{balance}}
+               </span></h4>
+    <a href="/checkbalance"><h4>Check your balance </h4></a><br>
+    <a href="/transfer"><h4>Transfer money </h4></a><br>
+    <a href="/statement"><h4>Get Statement </h4></a><br>
+    <div class="ml-4">
+
+    </div>
+    <a href="/loan"><h4>Apply Loan </h4></a><br>
+    <a href="/loan_status"><h4>Check Status of your loan </h4></a><br>
+       </div>
+       <div class="col-md-6" >
+               <img src='{% static "login/src2.jpg"%}' alt="#" class="img-fluid" >
+       </div>
+   </div>
+    <div class="mt-3">
+         Offers affordable and flexible housing loans that can turn your dream of owning a home into reality.
+We have products to suit every budget, taste and need. Whether you are self-employed or salaried, want a floating or
+    fixed rate, Axis Bank will offer a loan that is just right for you.
+Our offerings:
+Pay Rs 11 lakhs* less interest with QuikPay Home Loan
+Early principal repayment
+Nil prepayment charges
+Balance transfer available
+        fixed rate, Axis Bank will offer a loan that is just right for you.
+Our offerings:
+Pay Rs 11 lakhs* less interest with QuikPay Home Loan
+Early principal repayment
+Nil prepayment charges
+Balance transfer available
+    </div>
+</div>
+{% endblock %}

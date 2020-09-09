@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block css %}
+#div1{
+padding-top:195px;
+padding-bottom:195px
+}
+
+.head2{
+color:red;
+}
+{% endblock %}
+{% block body %}
+<div class="container" id="div1">
+  <form action="/checkbc" method="post">
+  {% csrf_token %}
+      <h1 class="head2">{{correct}}</h1>
+      <h1 id="head1"> Enter your Acount number:</h1>
+      <br>
+      <input type="text" name="accno">
+      <br>
+      <br>
+      <button type="submit" class="btn btn-primary" style="background:#DC3545; border-radius:20px"  >Submit</button>
+
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="vieport" content="width-device-width,initial-scale-1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <!-- Bootstrap css--><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+         crossorigin="anonymous">
+         <title>Denzent-web</title>
+         <!--font awesome -->
+         <script src="https://kit.fontawesome.com/952ec8dd4c.js"></script>
+        <!-- google font -->
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+        <!-- custom css-->
+
+         <style>
+         body, html{
+    margin: 0;
+    padding: 0;
+}
+a
+{
+    color:#DC3545;
+}
+
+a:hover{
+    color: #e994a2;
+}
+h2{
+    margin: 30px 0;
+    font-size: 1.5rem;
+}
+h4{
+    margin: 10px 0;
+    font-size: 1rem;
+}
+p{
+    font-size: 0.9rem;
+    text-align: justify;
+}
+body::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+body::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+body::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #dc3545;
+}
+            }
+            .navbar-brand{
+                font-family: 'Ubuntu',sans-serif;
+                font-size: 2em;
+                font-weight: bold;
+            }
+            .navbar #mymenu .custom-nav .nav-item a{
+
+                color: #fff;
+                padding: 10px 20px;
+            }
+            .navbar #mymenu .custom-nav .nav-item a:hover{
+                color: #fff;
+                background: #e33d4d;
+            }
+            .footer1{
+                height: 60px;
+                border-top: 3px solid #DC3545;
+                margin-bottom:0px;
+            }
+         {% block css %} {% endblock %} </style>
+    </head>
+    <body>
+        <!-- start navigation -->
+         <nav class="navbar navbar-expand-sm navbar-dark bg-danger fixed-top navbar1">
+             <a href="/" class="navbar-brand"> Qilin-Bank </a>
+             <div class="collapse navbar-collapse" id="mymenu">
+                 <ul class="navbar-nav pl-5 custom-nav">
+                     <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                     <li class="nav-item"><a href="/team1" class="nav-link">Team </a></li>
+                     <li class="nav-item"><a href="/contact" class="nav-link">Contact </a></li>
+                     <li class="nav-item"><a href="/about" class="nav-link">About us </a></li>
+                 </ul>
+             </div>
+        </nav>
+        <!-- end navigation-->
+       {% block body %} {% endblock %}
+
+<!--start of footer -->
+<footer  class="container-fluid bg-dark text-white mt-4 mb-0 footer1">
+    <div class="container">
+        <div class="row py-3">
+            <div class="col-md-6">
+                    <span>Follow Us </span>
+                <a href="#"><i class="fab fa-twitter px-3"></i></a>
+                <a href="#"><i class="fab fa-youtube pr-3"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g pr-3"></i></a>
+                <a href="#"><i class="fas fa-rss pr-3"></i></a>
+                 <a href="#"><i class="fab fa-facebook pr-3"-></i></a>
+                </div>
+  <div class="col-md-6">
+      <small>Desingned by <a href="#">Suraj Singh </a></small>
+      </div>
+</div>
+    </div>
+</footer>
+          <!-- j query popper bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+         crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html> 
